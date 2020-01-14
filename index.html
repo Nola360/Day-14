@@ -10,7 +10,14 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css"
     integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
 
-  <title>Hello, world!</title>
+
+  <style>
+    #loading,
+    #results {
+      display: none;
+    }
+  </style>
+  <title>Loan Calculator</title>
 </head>
 
 <body class="bg-dark">
@@ -25,11 +32,12 @@
           <!-- padding and sizing -->
           <h1 class="heading display-5 pb-3">Loan Calculator</h1>
           <form id="loan-form">
+
             <!-- In BS wrap inputs and labels in form group div-->
+            <!-- Loan Amount -->
             <div class="form-group">
               <!-- Puts $ to left -->
               <div class="input-group">
-                <!-- Loan Amount -->
                 <span class="input-group-addon">$</span>
                 <!-- styles BS input makes it a block lvl element -->
                 <input type="number" class="form-control" id="amount" placeholder="Loan Amount">
@@ -55,14 +63,14 @@
 
           <!-- LOADING ICON -->
 
-          <!-- <div class="loading">
+          <div id="loading">
             <img src="img/loading.gif" alt="">
-          </div> -->
+          </div>
 
 
           <!-- RESULTS -->
           <!-- Monthly Payment -->
-          <div id="resutls" class="pt-4">
+          <div id="results" class="pt-4">
             <h5>Results</h5>
             <div class="form-group">
               <div class="input-group">
